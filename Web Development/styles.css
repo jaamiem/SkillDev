@@ -2,20 +2,57 @@ body{
 	background-color: #E0E0E0;
 }
 
-.wrapp{
-	padding: 20px 15% 70px 15%;
+.wrapper{
+	padding: 20px 10% 70px 10%;
 	color: #282828;
+	height: 100vh;
+	overflow-x: hidden;
+	overflow-y: auto;
+	perspective: 2px;
+	position: static;
 }
 
 .jumbotron{
 	background-color: #9900CC;
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+}
+
+#content {
+	position: absolute;
+	top: 100;
 }
 
 .btn-group>.dropdown-menu{
 	padding: 10 10 10 10px;
 }
 
+#header {
+	padding:0 5% 0 5%;
+
+}
+
 #header h1{
 	color:#E0E0E0;
 }
-w{}
+
+.parallax::after {
+  /* Display and position the pseudo-element */
+  content: " ";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  /* Move the pseudo-element back away from the camera,
+   * then scale it back up to fill the viewport.
+   * Because the pseudo-element is further away, it appears to move more slowly, like in real life. */
+  transform: translateZ(-1px) scale(1.5);
+  /* Force the background image to fill the whole element. */
+  background-size: 100%;
+  /* Keep the image from overlapping sibling elements. */
+  z-index: -1;
+}

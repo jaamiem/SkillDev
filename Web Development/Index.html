@@ -10,56 +10,58 @@
 	<link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
-	<div class="jumbotron">
-		<div class="container" id="header">
-			<h1>Website</h1>
-			<p>This is a website template. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-				Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-				Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-		</div>
-	</div>
-	<div class="wrapp">
-		<nav class="navbar navbar-inverse navbar-fixed-top">
-			<div class="container-fluid">
-				<div class="navbar-header">
-					<a class="navbar-brand" href="#">Website</a>
-					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNav">
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-					</button>
-				</div>
-				<div class="collapse navbar-collapse" id="myNav">
-					<ul class="nav navbar-nav">
-						<li><a href="#">Home</a></li>
-						<li><a href="#">Page X</a></li>
-					</ul>
-					<ul class="nav navbar-nav navbar-right col-sm-1">
-						<div class="btn-group">
-							<button type="button" class="navbar-btn btn-link dropdown-toggle" data-toggle="dropdown" style="font-size:16px">
-								Login<span class="caret"></span>
-							</button>
-							<div class="dropdown-menu">
-								<div class="col-sm-12">
-									<div class="col-sm-12">
-										Login
-									</div>
-									<div class="col-sm-12">
-										<input type="text" name="uname" placeholder="Username or Email" onclick="return false;" class="form-control input-sm" id="inputError"/>
-									</div>
 
-									<div class="col-sm-12">
-										<input type="text" placeholder="Password" class="form-control input-sm" name="pword" id="password1"/>
-									</div>
+	<nav class="navbar navbar-inverse navbar-fixed-top">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<a class="navbar-brand" href="#">Website</a>
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNav">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+			</div>
+			<div class="collapse navbar-collapse" id="myNav">
+				<ul class="nav navbar-nav">
+					<li><a href="#">Home</a></li>
+					<li><a href="#">Page X</a></li>
+				</ul>
+				<ul class="nav navbar-nav navbar-right col-sm-2">
+					<div class="btn-group">
+						<button type="button" class="navbar-btn btn-link dropdown-toggle" data-toggle="dropdown" style="font-size:16px">
+							Login<span class="caret"></span>
+						</button>
+						<div class="dropdown-menu">
+							<div class="col-sm-12">
+								<div class="col-sm-12">
+									Login
+								</div>
+								<div class="col-sm-12">
+									<input type="text" name="uname" placeholder="Username or Email" onclick="return false;" class="form-control input-sm" id="inputError"/>
+								</div>
+
+								<div class="col-sm-12">
+									<input type="text" placeholder="Password" class="form-control input-sm" name="pword" id="password1"/>
 								</div>
 							</div>
 						</div>
 					</div>
-				</ul>
-			</div>
-		</nav>
+				</div>
+			</ul>
+		</div>
+	</nav>
 
-		<div>
+	<div class="wrapper">
+		<div class="jumbotron parallax">
+			<div class="container" id="header">
+				<h1>Website</h1>
+				<p>This is a website template. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+			</div>
+		</div>
+
+		<div id="content">
 			<section>
 				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 					Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi.
@@ -76,7 +78,6 @@
 				</p>
 			</section>
 		</div>
-
 	</div>
 </body>
 </html>
