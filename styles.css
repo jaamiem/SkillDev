@@ -1,0 +1,21 @@
+body{
+	background-color: #E0E0E0;
+}
+
+.wrapp{
+	padding: 20px 15% 70px 15%;
+	color: #282828;
+}
+
+.jumbotron{
+	background-color: #9900CC;
+}
+
+.btn-group>.dropdown-menu{
+	padding: 10 10 10 10px;
+}
+
+#header h1{
+	color:#E0E0E0;
+}
+w{}
