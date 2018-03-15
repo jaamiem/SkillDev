@@ -1,5 +1,4 @@
 var http = require('http');
-// var dt = require('./myfirstmodule');
 var url = require('url');
 
 http.createServer(function(req, res){
