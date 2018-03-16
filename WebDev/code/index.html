@@ -1,0 +1,98 @@
+<!doctype HTML>
+<html lang="en">
+<head>
+	<title>Skills Development</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="styles/styles.css">
+</head>
+<body>
+
+	<nav class="navbar navbar-dark">
+		<div class="container-fluid">
+
+			<!-- LOGO & BURGER MENU -->
+			<div class="navbar-header">
+				<a class="navbar-brand" href="#">Findspot</a>
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNav">
+					<!-- Only shows when viewport compresses -->
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+
+				<!-- DROP DOWN LOGIN BUTTON -->
+				<div class="nav navbar-nav navbar-right pull-right">
+					<div class="btn-group">
+						<button type="button" class="navbar-btn btn-link dropdown-toggle" data-toggle="dropdown" style="font-size:16px">
+							Login<span class="caret"></span>
+						</button>
+
+						<!-- DROPDOWN FORM -->
+						<div class="dropdown-menu col-sm-12">
+							<form id="login-form">
+								<!-- LOGIN BOX -->
+								<div class="form-group">
+									<div class="col-sm-12">
+										<label for="uname">Login</label>
+									</div>
+									<div class="col-sm-12">
+										<input type="text" name="uname" placeholder="Username" onclick="return false;" class="form-control input-sm space"/>
+									</div>
+								</div>
+
+								<!-- PASSWORD BOX-->
+								<div class="col-sm-12">
+									<input type="text" name="pword" placeholder="Password" class="form-control input-sm" id="password1"/>
+								</div>
+
+								<!-- 'REMEMBER ME' & 'SUBMIT' BUTTONS -->
+								<div class="form-group">
+									<div class="checkbox col-sm-12">
+										<label><input type="checkbox" name="rem-box">Remember Me</label>
+									</div>
+								</div>
+								<div class="col-sm-12">
+									<button type="submit" class="btn btn-primary space">Submit</button>
+								</div>
+
+							</form>
+						</div>
+					</div>
+				</div>
+
+				<!-- SEARCH BAR -->
+				<form class="input-group">
+					<input class="form-control" type="search" placeholder="Find A Spot...">
+					<span class="input-group-btn">
+						<button class="btn btn-primary" type="button">Go!</button>
+					</span>
+				</form>
+
+			</div>
+
+			<div class="collapse navbar-collapse" id="myNav">
+				<!-- PAGE LINKS -->
+				<ul class="nav navbar-nav linkbar">
+					<li><a href="#">Map</a></li>
+					<li><a href="#">About</a></li>
+					<li><a href="#">Help</a></li>
+				</ul>
+
+			</div>
+		</div>
+	</nav>
+
+	<div id="panelLeft" class="container col-sm-2">
+		<div style="background-color:blue;"><p>PLACEHOLDER</p></div>
+	</div>
+
+	<div id="mapRight" class="container col-sm-12">
+		<div style="background-color:red;width:100%;"><p>PLACEHOLDER</p></div>
+	</div>
+
+</body>
+</html>
