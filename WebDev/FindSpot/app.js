@@ -6,13 +6,27 @@ var app = express();
 
 var spots = [
 	{
+		id: 1,
 		name: "College Street Car Park",
 		lat: 57.142736,
 		lng: -2.099031
 	},
 	{
+		id: 2,
 		name: "Crown Terrace",
-		lat:57.144050,
+		lat: 57.144050,
+		lng:-2.101225
+	},
+	{
+		id: 3,
+		name: "College Street Car Park",
+		lat: 57.142736,
+		lng: -2.099031
+	},
+	{
+		id: 4,
+		name: "Crown Terrace",
+		lat: 57.144050,
 		lng:-2.101225
 	}
 ]

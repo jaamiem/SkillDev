@@ -3,6 +3,12 @@
 	<%- include('partials/header') %>
 <body>
 	<%- include('partials/navbar') %>
+	<div>
+		<img class="sideArrow" src="img/arrow_in.png" id="sidebar-collapse">
+	</div>
+	<div class="wrapper">
+		<%- include('partials/navbar') %>
+	</div>
 
 	<div id="map"></div>
 	<script>
@@ -28,9 +34,6 @@
 	  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDRK2xpbDf14zS08cMkp252N8uPvt3O4_I&callback=initMap">
 	</script>
 
-	<!-- POSITION ABSOLUTE SQUARE ICON TO OPEN SIDE BAR -->
-	<div class="sideArrow">
-		<img src="img/arrow_in.png" alt="Sidebar Control" height="32" width="32">
-	</div>
+
 </body>
 </html>

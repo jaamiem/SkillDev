@@ -4,10 +4,13 @@ html, body{
 }
 
 .wrap {
-	width:80%;
+	display:flex;
+	align-items: stretch;
+	width:70%;
 	height: 80%;
 	border-radius: 10px;
-	background-color: #e6e6e6;
+	background-color: #f2f2f2;
+	color: #404040;
 	margin: 0 auto;
 	margin-top: 4em;
 	padding: 1em 2em 1em 2em;
@@ -55,4 +58,16 @@ html, body{
 	position: absolute;
 	left: 0px;
 	top: 50vh;
+	width: 32;
+	height: 32;
+}
+
+#sidebar {
+	min-width: 250px;
+	max-width: 250px;
+	min-height: 100vh;
+}
+
+#sidebar.active{
+	margin-left: -250px;
 }
