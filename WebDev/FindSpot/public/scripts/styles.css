@@ -1,5 +1,15 @@
-body{
+html, body{
 	background-color: #4d94ff;
+	height: 100vh;
+}
+
+.wrap {
+	width:80%;
+	height: 80%;
+	border-radius: 10px;
+	background-color: #e6e6e6;
+	margin: 0 auto;
+	padding: 1em 2em 1em 2em;
 }
 
 .navbar .navbar-collapse {
