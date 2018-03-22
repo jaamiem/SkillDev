@@ -9,6 +9,7 @@ html, body{
 	border-radius: 10px;
 	background-color: #e6e6e6;
 	margin: 0 auto;
+	margin-top: 4em;
 	padding: 1em 2em 1em 2em;
 }
 
@@ -48,4 +49,10 @@ html, body{
 
 .centerNav {
 	margin-top: 0.7em;
+}
+
+.sideArrow {
+	position: absolute;
+	left: 0px;
+	top: 50vh;
 }

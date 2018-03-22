@@ -5,23 +5,32 @@
 	<%- include('partials/navbar') %>
 
 	<div id="map"></div>
-    <script>
-      function initMap() {
-        var uluru = {lat: -25.363, lng: 131.044};
-        var map = new google.maps.Map(document.getElementById('map'), {
-          zoom: 4,
-          center: uluru
-        });
-        var marker = new google.maps.Marker({
-          position: uluru,
-          map: map
-        });
-      }
-    </script>
+	<script>
+	var marker;
+
+	function initMap() {
+		var abz = {lat:57.1497, lng:-2.0943};
+		var map = new google.maps.Map(document.getElementById('map'), {
+			zoom: 8,
+			center: abz
+		});
+		// for(i = 0; i < spots.length; i++){
+		// 	marker = new google.maps.Marker({
+		// 		position: spots[i].lat, spots[i].lng,
+		// 		map: map
+		//   	});
+		// }
+
+	}
+	</script>
 
 	<script async defer
 	  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDRK2xpbDf14zS08cMkp252N8uPvt3O4_I&callback=initMap">
 	</script>
 
+	<!-- POSITION ABSOLUTE SQUARE ICON TO OPEN SIDE BAR -->
+	<div class="sideArrow">
+		<img src="img/arrow_in.png" alt="Sidebar Control" height="32" width="32">
+	</div>
 </body>
 </html>
