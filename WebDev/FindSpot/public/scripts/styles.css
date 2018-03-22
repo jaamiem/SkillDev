@@ -1,9 +1,5 @@
 body{
-	background-color: #E0E0E0;
-}
-
-.linkbar{
-	text-align: center;
+	background-color: #e6e6e6;
 }
 
 .navbar .navbar-collapse {
@@ -16,4 +12,18 @@ body{
 
 .space {
 	margin-bottom: 1em;
+}
+
+.caret {
+	margin-right: 25px;
+}
+
+#map {
+	height: 87vh;
+	width: 100%;
+	overflow:auto;
+}
+
+.linkbar{
+	color: #99c2ff;
 }

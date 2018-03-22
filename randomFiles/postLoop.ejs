@@ -1,0 +1,22 @@
+<div class="list-group">
+	<!-- Loop over blog posts and render them -->
+	<% posts.forEach((post) => { %>
+		<a href="/post/<%= post.id %>" class="list-group-item">
+			<h4 class="list-group-item-heading"><%= post.title %></h4>
+			<p class="list-group-item-text"><%= post.author %></p>
+		</a>
+		<% }) %>
+	</div>
+
+
+	app.get('/post/:id', (req,res) => {
+		const post = posts.filter((post) => {
+			return post.id = req.params.id
+		})[0]
+
+		res.render('post', {
+			author: post.author,
+			title: post.title,
+			body: post.body
+		});
+	});
