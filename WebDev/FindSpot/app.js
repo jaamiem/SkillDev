@@ -4,7 +4,7 @@ var ejs = require('ejs');
 
 var app = express();
 
-var spots = [
+const spots = [
 	{
 		id: 1,
 		name: "College Street Car Park",
@@ -31,6 +31,8 @@ var spots = [
 	}
 ]
 
+var page = 0;
+
 //  Set the view engine to read EJS files for templating
 app.set('view engine', 'ejs');
 
@@ -38,17 +40,17 @@ app.use(express.static(__dirname + '/public'));
 
 //  Initial page
 app.get('/', (req, res) => {
-	res.render('home', { spots: spots });
+	res.render('page', { title: 'Home', spots: spots, page: page });
 });
 
 //  About Page
 app.get('/about', (req,res) => {
-	res.render('about');
+	res.render('about', { title: 'About' });
 })
 
 //  Help Page
 app.get('/help', (req,res) => {
-	res.render('help');
+	res.render('help', { title: 'Help' });
 })
 
 app.listen(8080);

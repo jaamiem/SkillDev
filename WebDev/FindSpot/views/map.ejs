@@ -1,15 +1,4 @@
-<!doctype HTML>
-<html lang="en">
-	<%- include('partials/header') %>
-<body>
-	<%- include('partials/navbar') %>
-
-	<div id="map"></div>
-
-	<script>
-	var marker;
-	var loc;
-
+<script>
 	function initMap() {
 		var abz = {lat:57.1497, lng:-2.0943};
 		var map = new google.maps.Map(document.getElementById('map'), {
@@ -24,13 +13,11 @@
 			map: map
 		});
 	}
+</script>
 
-	</script>
-
-	<script async defer
+<script async defer
 	  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDRK2xpbDf14zS08cMkp252N8uPvt3O4_I&callback=initMap">
-	</script>
-
+</script>
 
 </body>
 </html>

@@ -1,21 +1,12 @@
-<!-- View/header -->
-<%# Header template for all pages  %>
+<!-- views/header -->
+<%# Hader template for all pages  %>
 
 <head>
-	<title>FindSpot</title>
+	<title>FindSpot | <%- title %></title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	<link rel="stylesheet" type="text/css" href="scripts/styles.css">
-	<script>
-		$(document).ready(function () {
-
-	    $('#sidebarCollapse').on('click', function () {
-	        $('#sidebar').toggleClass('active');
-	    });
-
-		});
-	</script>
 </head>
