@@ -1,6 +1,5 @@
 <nav class="navbar navbar-dark">
 	<div class="container-fluid">
-
 		<!-- LOGO & BURGER MENU -->
 		<div class="navbar-header">
 			<a class="navbar-brand" href="/" style="font-size:1.7em; color:white; margin-top: 0.4em;">Findspot</a>
@@ -47,51 +46,49 @@
 
 			<%# TODO: push into hamburger to size for mobile %>
 			<%# TODO: adjust searchbar size on <~1200 screens%>
-			<ul class="pull-right linkbar">
-				<li <% if ( title === 'Home' ) { %> class="active" <% } %>><a href="/">Map</a><li>
-				<li <% if ( title === 'About' ) { %> class="active" <% } %>><a href="/about">About</a></li>
-				<li <% if ( title === 'Help' ) { %> class="active" <% } %>><a href="/help">Help</a></li>
-				<li><a class="btn logBtn dropdown-toggle" data-toggle="dropdown">Login</a></li>
-
-				<!-- DROPDOWN FORM -->
-				<div class="dropdown-menu col-sm-2 pull-right">
-					<form id="login-form">
-						<!-- LOGIN BOX -->
-						<div class="form-group">
+			<div class="pull-right linkbar centerNav">
+				<ul class="linkbar" style="float:left;">
+					<li <% if ( title === 'Home' ) { %> class="active" <% } %>><a href="/">Map</a><li>
+					<li <% if ( title === 'About' ) { %> class="active" <% } %>><a href="/about">About</a></li>
+					<li <% if ( title === 'Help' ) { %> class="active" <% } %>><a href="/help">Help</a></li>
+					<li></li>
+				</ul>
+				<div class="dropdown show pull-right">
+					<a id='dropdown' href='#' class="btn accBtn dropdown-toggle" data-toggle="dropdown">Login</a>
+					<!-- DROPDOWN FORM -->
+					<div class="dropdown-menu col-sm-2 pull-right">
+						<form id="login-form">
+							<!-- LOGIN BOX -->
+							<div class="form-group">
+								<div class="col-sm-12"><label for="uname">Login</label></div>
+								<div class="col-sm-12">
+									<input type="text" name="uname" placeholder="Username" onclick="return false;"
+									class="form-control input-sm space"/>
+								</div>
+							</div>
+							<br>
+							<!-- PASSWORD BOX-->
 							<div class="col-sm-12">
-								<label for="uname">Login</label>
+								<input type="text" name="pword" placeholder="Password" class="form-control input-sm" id="password1"/>
 							</div>
-							<div class="col-sm-12">
-								<input type="text" name="uname" placeholder="Username" onclick="return false;" class="form-control input-sm space"/>
-							</div>
-						</div>
 
-						<!-- PASSWORD BOX-->
-						<div class="col-sm-12">
-							<input type="text" name="pword" placeholder="Password" class="form-control input-sm" id="password1"/>
-						</div>
-
-						<!-- 'REMEMBER ME' & 'SUBMIT' BUTTONS -->
-						<div class="form-group">
-							<div class="checkbox col-sm-12">
-								<label><input type="checkbox" name="rem-box">Remember Me</label>
+							<!-- 'REMEMBER ME' & 'SUBMIT' BUTTONS -->
+							<div class="form-group">
+								<div class="checkbox col-sm-12"><label><input type="checkbox" name="rem-box">Remember Me</label></div>
 							</div>
-						</div>
-						<div class="col-sm-12">
-							<button type="submit" class="btn btn-primary space">Submit</button>
-						</div>
-					</form>
+							<div class="col-sm-12"><button type="submit" class="btn btn-primary space">Submit</button></div>
+						</form>
+					</div>
 				</div>
-			</ul>
+			</div>
+
 			<!-- SEARCH BAR -->
 			<form class="input-group col-sm-6 centerNav searchbar">
 				<input class="form-control" type="search" placeholder="Find a spot...">
 				<span class="input-group-btn">
-					<button class="btn btn-default" type="button">Go!</button>
+					<button class="btn btn-default" type="button" style="transition: all 1s;">Go!</button>
 				</span>
 			</form>
-			<!-- PAGE LINKS -->
-
 			</div>
 		</div>
 	</div>

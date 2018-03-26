@@ -1,34 +1,52 @@
 <!doctype HTML>
 <html lang="en">
-	<%- include('partials/header') %>
+<%- include('partials/header') %>
 <body>
+<%- include('partials/navbar') %>
 
-	<%- include('partials/navbar') %>
+<script>
+	// TODO: Script sidebar functions
+</script>
 
-	<div id="content"><div id="map"></div></div>
+<div id="content">
+	<!-- <div id='sidebar'>
+		<ul class="list-unstyled components">
+			<p>Dummy Heading</p>
+			<li class="active">
+				<a href="#spotSubmenu" data-toggle="collapse">Home</a>
+				<ul class="collapse list-unstyled" id="spotSubmenu">
+					<li><a href="#">Home 1</a></li>
+					<li><a href="#">Home 2</a></li>
+					<li><a href="#">Home 3</a></li>
+			  	</ul>
+			<li><a href="#">About</a>
+		</ul>
+	</div> -->
+	<div id="map"></div>
+</div>
 
-	<script>
-	function initMap() {
-		var abz = {lat:57.1497, lng:-2.0943};
-		var map = new google.maps.Map(document.getElementById('map'), {
-			zoom: 8,
-			center: abz
-		});
-	}
+<script>
+function initMap() {
+	var abz = {lat:57.1497, lng:-2.0943};
+	var map = new google.maps.Map(document.getElementById('map'), {
+		zoom: 8,
+		center: abz
+	});
+}
 
-	function placeMarker(map, location){
-		var marker = new google.maps.marker({
-			position: location,
-			map: map
-		});
-	}
+// TODO: Write loop to place all spots on the map 
+function placeMarker(map, location){
+	var marker = new google.maps.marker({
+		position: location,
+		map: map
+	});
+}
 
-	</script>
+</script>
 
-	<script async defer
-	  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDRK2xpbDf14zS08cMkp252N8uPvt3O4_I&callback=initMap">
-	</script>
-
+<script async defer
+  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDRK2xpbDf14zS08cMkp252N8uPvt3O4_I&callback=initMap">
+</script>
 
 </body>
 </html>
