@@ -45,9 +45,11 @@
 				</div>
 			</div> %>
 
+			<%# TODO: push into hamburger to size for mobile %>
+			<%# TODO: adjust searchbar size on <~1200 screens%>
 			<ul class="pull-right linkbar">
-				<li <% if ( title === 'Home' ) { %> class="active" <% } %>><a onclick="changePage(0)">Map</a><li>
-				<li <% if ( title === 'About' ) { %> class="active" <% } %>><a onclick="changePage(1)">About</a></li>
+				<li <% if ( title === 'Home' ) { %> class="active" <% } %>><a href="/">Map</a><li>
+				<li <% if ( title === 'About' ) { %> class="active" <% } %>><a href="/about">About</a></li>
 				<li <% if ( title === 'Help' ) { %> class="active" <% } %>><a href="/help">Help</a></li>
 				<li><a class="btn logBtn dropdown-toggle" data-toggle="dropdown">Login</a></li>
 

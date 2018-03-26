@@ -1,10 +1,10 @@
-html, body{ background-color: #4d94ff; height: 100vh; }
+html, body{ background-color: #4d94ff; height: 100%; width: 100%; font-size: 100%; }
 /* _____Nav Bar_____ */
-.navbar { min-height: 0px !important; }
+.navbar { min-height: 0px !important; position: absolute; height: 7.5%; }
 .navbar .navbar-collapse { text-align: center; }
 .btn-group>.dropdown-menu{ padding: 10 10 10 10px; }
 .space { margin-bottom: 1em; }
-.searchbar { box-shadow: 0 .3em 0.5em #80b3ff; }
+.searchbar { box-shadow: 0 .3em 0.5em #0066ff; }
 .centerNav { margin-top: 1.4em; }
 .linkbar {
 	padding: 1.3em 4em 0em 4em;
@@ -20,17 +20,17 @@ html, body{ background-color: #4d94ff; height: 100vh; }
 	/* margin: 1em 2em 0px 2em; */
 	text-decoration: none;
 	text-align: center;
-	font-size: 1.3em;
+	font-size: large;
 	color: #b3d1ff;
 	width: 4em;
 	display: inline-block;
 }
-.linkbar .active > a, a:active {
-	color: #3385ff;
-	background-color: white;
+.linkbar .active > a {
+	color: #0047b3;
+	background-color: #f7f7f7;
 	border-radius: 25px
 }
-.linkbar a:hover { color: white; }
+.linkbar a:hover { color: #f7f7f7; }
 
 .active > a:hover {
 	color: white;
@@ -40,34 +40,25 @@ html, body{ background-color: #4d94ff; height: 100vh; }
 	display: block;
 	border-radius: 8px;
 	box-shadow: inset 0 -0.3em 0.5em #e6e6e6;
-	background-color: white;
+	background-color: #f7f7f7;
 	color: #3385ff;
-	width: 4em;
-	height: 2em;
 }
 
 /* _____Content_____ */
-
+.content { position: absolute; top: 7.5%; height: 92.5%; width: 100vw; }
 .wrap {
-	display:flex;
-	align-items: stretch;
 	width:70%;
 	height: 80%;
 	border-radius: 10px;
-	background-color: #f2f2f2;
+	background-color: #f7f7f7;
 	color: #404040;
 	margin: 0 auto;
 	margin-top: 4em;
 	padding: 1em 2em 1em 2em;
 }
 #map {
-	height: 92vh;
+	position: absolute;
+	top: 7.5%;
+	height: 92.5%;
 	width: 100vw;
-	overflow:auto;
 }
-#sidebar {
-	min-width: 250px;
-	max-width: 250px;
-	min-height: 100vh;
-}
-#sidebar.active{ margin-left: -250px; }

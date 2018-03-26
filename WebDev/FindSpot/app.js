@@ -31,8 +31,6 @@ const spots = [
 	}
 ]
 
-var page = 0;
-
 //  Set the view engine to read EJS files for templating
 app.set('view engine', 'ejs');
 
@@ -40,7 +38,7 @@ app.use(express.static(__dirname + '/public'));
 
 //  Initial page
 app.get('/', (req, res) => {
-	res.render('page', { title: 'Home', spots: spots, page: page });
+	res.render('home', { title: 'Home', spots: spots });
 });
 
 //  About Page

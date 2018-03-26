@@ -2,14 +2,12 @@
 <html lang="en">
 	<%- include('partials/header') %>
 <body>
+
 	<%- include('partials/navbar') %>
 
-	<div id="map"></div>
+	<div id="content"><div id="map"></div></div>
 
 	<script>
-	var marker;
-	var loc;
-
 	function initMap() {
 		var abz = {lat:57.1497, lng:-2.0943};
 		var map = new google.maps.Map(document.getElementById('map'), {
