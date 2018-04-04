@@ -9,6 +9,7 @@ html, body { background-color: #4d94ff; height: 100%; width: 100%; font-size: 90
 	top: 50%;
 	transform: translateY(50%);
 }
+.navbar-brand { font-size:1.7em; color:white !important; margin-top: 0.4em; }
 /* _____Link Bar_____ */
 .dropdown-menu {
 	position: absolute;
