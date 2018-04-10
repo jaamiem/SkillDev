@@ -1,6 +1,7 @@
 //  Include Express and set it to app
 var express = require('express');
 var ejs = require('ejs');
+var path = require('path');
 
 var app = express();
 
@@ -33,8 +34,7 @@ const spots = [
 
 //  Set the view engine to read EJS files for templating
 app.set('view engine', 'ejs');
-
-app.use(express.static(__dirname + '/public'));
+app.use(express.static(path.join(__dirname + '/public')));
 
 //  Initial page
 app.get('/', (req, res) => {
