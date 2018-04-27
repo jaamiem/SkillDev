@@ -1,54 +1,45 @@
-<nav class="navbar navbar-dark">
+<nav class="navbar navbar-dark <% if (title === 'Home') { %> navShadow <%} else { %> shadowFx <% } %>">
 	<div class="container-fluid">
 		<!-- LOGO & BURGER MENU -->
-		<div class="navbar-header">
-			<a class="navbar-brand" href="/" style="">Findspot</a>
+		<div class="navbar-header pull-left">
+			<a class="navbar-brand" href="/">Findspot</a>
+		</div>
 
-			<%# TODO: push into hamburger to size for mobile %>
-			<%# TODO: adjust searchbar size on <~1200 screens%>
-			<div class="pull-right linkbar centerNav">
-				<ul class="linkbar pull-left">
-					<li <% if ( title === 'Home' ) { %> class="active" <% } %>><a href="/">Map</a><li>
-					<li <% if ( title === 'About' ) { %> class="active" <% } %>><a href="/about">About</a></li>
-					<li <% if ( title === 'Help' ) { %> class="active" <% } %>><a href="/help">Help</a></li>
-				</ul>
+		<%# TODO: push into hamburger to size for mobile %>
+		<%# TODO: adjust searchbar size on <~1200 screens%>
 
-				<div class="dropdown show pull-right">
-					<a id='dropdown' href='#' class="btn accBtn dropdown-toggle" data-toggle="dropdown">Login</a>
-					<!-- DROPDOWN FORM -->
-					<div class="dropdown-menu col-sm-2 pull-right">
-						<form id="login-form">
-							<!-- LOGIN BOX -->
-							<div class="form-group">
-								<div class="col-sm-12"><label for="uname">Login</label></div>
-								<div class="col-sm-12">
-									<input type="text" name="uname" placeholder="Username" onclick="return false;"
-									class="form-control input-sm space"/>
-								</div>
-							</div>
-							<br>
-							<!-- PASSWORD BOX-->
-							<div class="col-sm-12">
-								<input type="password" name="pword" placeholder="Password" class="form-control input-sm" id="password1"/>
-							</div>
+		<!-- SEARCH BAR -->
+		<form action="/" class="input-group col-md-6 col-sm-6 col-xs-2 centerNav searchbar">
+			<noscript><label for="loc">Search</label></noscript>
+			<input name="loc" class="form-control" type="search" placeholder="Find a spot...">
+			<span class="input-group-btn">
+				<button class="btn btn-primary" type="submit">Find</button>
+			</span>
+		</form>
 
-							<!-- 'REMEMBER ME' & 'SUBMIT' BUTTONS -->
-							<div class="form-group">
-								<div class="checkbox col-sm-12"><label><input type="checkbox" name="rem-box">Remember Me</label></div>
-							</div>
-							<div class="col-sm-12"><button type="submit" class="btn btn-primary space">Submit</button></div>
-						</form>
-					</div>
-				</div>
-			</div>
+		<!-- The main links in the navbar -->
+		<button id="burgerButton" type="button" class="navbar-toggle btn btn-primary" data-toggle="collapse" data-target="#links">
+			&vellip;
+		</button>
 
-			<!-- SEARCH BAR -->
-			<form class="input-group col-sm-6 centerNav searchbar">
-				<input class="form-control" type="search" placeholder="Find a spot...">
-				<span class="input-group-btn">
-					<button class="btn btn-default" type="button" style="transition: all 1s;">Go!</button>
-				</span>
-			</form>
+		<%# If the user is logged in, display their name %>
+		<% if (typeof user !== 'undefined' && user !== null) { %>
+			<span><%= user %></span>
+		<% } %>
+
+		<div id="links" class="pull-left linkbar centerNav collapse navbar-collapse">
+			<ul class="nav navbar-nav linkbar pull-left" role="menu">
+				<li <% if ( title === 'Home' ) { %> class="active" <% } %>><a href="/">Map</a></li>
+				<li <% if ( title === 'About' ) { %> class="active" <% } %>><a href="/about">About</a></li>
+				<li <% if ( title === 'Help' ) { %> class="active" <% } %>><a href="/help">Help</a></li>
+
+				<%# Different buttons are displayed here depending on whether a user is logged in. %>
+				<% if (typeof user !== 'undefined' && user !== null) { %>
+					<li><a href="/dologout">Log out</a></li>
+				<% } else { %>
+					<li <% if ( title === 'Log in' ) { %> class="active" <% } %>><a href="#" data-toggle='modal' data-target='#accModal'>Log in</a></li>
+				<% } %>
+			</ul>
 		</div>
 	</div>
 </nav>

@@ -1,0 +1,113 @@
+
+<%# Register Modal %>
+<div class='modal fade' id='accModal' role='dialog'>
+	<div class='modal-dialog modal-dialog-centered modal-lg'>
+		<!-- Modal Content -->
+		<div class='modal-content'>
+
+			<%# MODAL HEADER %>
+			<div class='modal-header'>
+				<button type='button' class='close' data-dismiss='modal' style='color:white;'>&times;</button>
+			</div>
+
+			<div class='modalViews'>
+				<ul class='nav nav-tabs'>
+					<li id='regli'>
+						<a href='#registerBody' data-toggle='tab' class='tabName'><h4 class='tabName'>Register for Findspot</h4></a>
+					</li>
+					<li id='logli' class='active'>
+						<a href='#loginBody' data-toggle='tab' class='tabName'><h4 class='tabName'>Login to Findspot</h4></a>
+					</li>
+				</ul>
+			</div>
+
+			<%# REGISTER BODY TAB %>
+			<div class="tab-content">
+				<div id='registerBody' class='registerBody tab-pane'>
+					<form id="#reg" action='/doregister' method="POST" class="form-group">
+						<!-- USERNAME BOX -->
+						<div class="input-group formField">
+							<input id='regusername' class="form-control input-lg" type="text" placeholder="Username" name="username" tabindex="0" data-toggle='tooltip' data-trigger='focus' title='No naughty words' autocomplete="off" required/>
+						</div>
+
+						<!-- PASSWORD BOX-->
+						<div class="input-group formField">
+							<input class="form-control input-lg" type="password" placeholder="Password" name="password" id="regpassword" autocomplete="off" required/>
+						</div>
+
+						<!-- PASSWORD CONFIRMATION BOX-->
+						<div class="input-group formField">
+							<input class="form-control input-lg" type="password" placeholder="Retype Password" name="confpassword" id="confpassword" autocomplete="off" required/>
+						</div>
+						<div class="input-group endForm">
+							<button id="signupBtn" type="submit" class="btn formSubmit">Sign up</button>
+						</div>
+					</form>
+				</div>
+
+				<%# LOGIN BODY TAB %>
+				<div id='loginBody' class='loginBody tab-pane active'>
+					<form action='/dologin' method="POST" class="form-group">
+						<!-- LOGIN BOX -->
+						<div class="input-group formField">
+							<input class="form-control input-sm" type="text" name="username" placeholder="Username" required/>
+						</div>
+						<!-- PASSWORD BOX-->
+						<div class="input-group formField">
+							<input class="form-control input-sm" type="password" name="password" id="password" placeholder="Password" autocomplete="off" required/>
+						</div>
+						<label class='checkbox'><input class='input-lg' type="checkbox" name="rem-box" id="rem-box"> Remember Me </label>
+						<br>
+						<!-- 'REMEMBER ME' & 'SUBMIT' BUTTONS -->
+						<div class="input-group endForm">
+							<button type="submit" class="btn formSubmit">Sign In</button>
+						</div>
+					</form>
+				</div>
+			</div>
+			<div class='modal-footer'>
+				<div class="alert alert-info" role="alert" id="cookie">
+					FindSpot uses cookies for website functionality, such as logging in and making use of the Google Maps technology. By using this website, you consent to our use of cookies in your browser.
+				</div>
+				<button type='button' class='btn btn-default' data-dismiss='modal'>Close Window</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<%# Modal Scripts %>
+<script>
+	$(function() {
+		$('#regpassword, #confpassword').keyup(checkPassMatch);
+
+		$('#regusername').tooltip({
+			trigger: 'hover focus',
+			placement: 'right'
+		});
+	});
+
+	function checkPassMatch() {
+		var pass = $('#regpassword').val();
+		var confpass = $('#confpassword').val();
+		var len = confpass.length;
+
+		if ( len < 1 ) {
+			$('#regpassword, #confpassword').removeClass('inputError');
+			$('#signupBtn').removeClass('formDenied');
+		}
+		else if ( len > 0) {
+			if ( pass != confpass ){
+				$('#regpassword, #confpassword').removeClass('passMatched');
+				$('#regpassword, #confpassword').addClass('inputError');
+				$('#signupBtn').removeClass('formAccepted')
+				$('#signupBtn').addClass('formDenied')
+			}
+			else {
+				$('#regpassword, #confpassword').removeClass('inputError');
+				$('#regpassword, #confpassword').addClass('passMatched');
+				$('#signupBtn').removeClass('formDenied');
+				$('#signupBtn').addClass('formAccepted');
+			}
+		}
+	}
+</script>

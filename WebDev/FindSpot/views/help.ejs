@@ -1,28 +1,45 @@
-
-
-<!doctype HTML>
-<html lang="en">
+<!DOCTYPE html>
 <%- include('partials/header') %>
 <body>
 <%- include('partials/navbar') %>
-<div class="content">
-	<div class="wrap">
-		<div>
-			<h3>How do I find a space?</h2>
-			<ol>
-				<li>Search</li>
-				<p>Enter your destination.</p>
-				<li>Filter out</li>
-				<p>Use the sliders to decide how far you want to search and how much you want to pay.</p>
-				<li>Choose your space</li>
-				<p>Pick the space that suits you best from the list!</p>
-			</ol>
-		</div>
-		<div>
-			<h3>How do I add a space?</h3>
-			<p>It's easy! Just click the "Add location" button at the bottom of the page and fill out a small form describing the spot!</p>
-		</div>
+<%- include('partials/accModals') %>
+
+<div class="jumbotron wrap wrapWhite">
+  <h1 class="display-3 mt-3">What can we do to help?</h1>
+	 <div class="row justify-content-center">
+		<div class="col-sm">
+			<div class="container mt-5">
+            <h2>Find spot</h2>
+			<div class="zoom">
+	           <img data-toggle="collapse" data-target="#demo1" src="Images/addPark.png" class="responsive displayed mt-3 mb-3  ml-3 mr-3;">
+            </div>
+							 <div id="demo1" class="collapse">
+				          <div class="embed-responsive embed-responsive-16by9">
+		               <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/iX0fdjWJvz0" allowfullscreen>
+									 </iframe>
+	                </div>
+			         </div>
+			  </div>
+		 </div>
+		 <div class="col-sm">
+		 	<div class="container mt-5" style="">
+		 			 <h2>Add spot</h2>
+					 <div class="zoom">
+					 <img data-toggle="collapse" data-target="#demo" src="Images/park.png" class="responsive displayed mt-3 mb-3 ml-3 mr-3">
+           </div>
+						 <div id="demo" class="collapse">
+								<div class="embed-responsive embed-responsive-16by9">
+								 <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/vr9O0uR4-Kw" allowfullscreen>
+
+								 </iframe>
+								</div>
+						 </div>
+		 	</div>
+		 </div>
 	</div>
 </div>
+<div class="container mt-500">
+	<p><br><br><br><br><br></p>
+	</div>
 </body>
 </html>

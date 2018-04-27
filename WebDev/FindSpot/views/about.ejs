@@ -1,17 +1,86 @@
-<!doctype HTML>
+<!DOCTYPE html>
 <html lang="en">
 <%- include('partials/header') %>
 <body>
 <%- include('partials/navbar') %>
-<div class="content">
-	<div class="wrap">
-		<section>
-			<p>Parking is one of the most difficult and dysfunctional parts of modern city life – and that’s no surprise, as it’s barely changed for decades.
-			Over 23% of car journeys involve some kind of parking pain – that’s 190 million trips a month – with drivers suffering from both uncertainty (availability, prices, restrictions) and inconvenience (full car parks, slow payments, unfair fines) on a daily basis.
-			Yet we have the technology to make parking function seamlessly – and so much space is lying underutilised. There has to be a better system…
-			At FindSpot, we are on a mission to make parking easy.
-			Findspot is dedicated to solving the parking problem by cracking both sides of the market – making parking easy and efficient for everyone.</p>
-		</section>
+<%- include('partials/accModals') %>
+
+<div id="carouselFS" class="carousel slide wraprafa" data-ride="carousel">
+  <ol class="carousel-indicators">
+    <li data-target="#carouselFS" data-slide-to="0" class="active"></li>
+    <li data-target="#carouselFS" data-slide-to="1"></li>
+    <li data-target="#carouselFS" data-slide-to="2"></li>
+  </ol>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+	  <div class="slidetext">
+        <h1>Who are we?</h1>
+        <p id="carouselp">A group of students working for a University project application that will help locate free parking spots for Aberdeen City.</p>
+      </div>
+      <img class="d-block w-100" src="Images\whoarewe.jpg" alt="First slide">
+    </div>
+    <div class="carousel-item">
+	  <div class="slidetext">
+        <h1>Philosophy</h1>
+        <p id="carouselp">If you pay road tax, you deserve free parking. Cars are not a luxury anymore, they are a necessity and so is free parking.</p>
+      </div>
+      <img class="d-block w-100" src="Images\philosophy.jpg" alt="Second slide">
+    </div>
+    <div class="carousel-item">
+	  <div class="slidetext">
+        <h1>Goals</h1>
+        <p id="carouselp">To be the most complete application for free parking in Aberdeen city.</p>
+      </div>
+      <img class="d-block w-100" src="Images\goals.jpg" alt="Third slide">
+    </div>
+  </div>
+  <a class="carousel-control-prev" href="#carouselFS" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselFS" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+</div>
+<div id="ourMission" class="container-fluid wrap wrapBlack">
+  <h2>Our mission</h2>
+  <p><br>Parking is one of the most difficult and dysfunctional parts of modern city life – and that’s no surprise, as it’s barely changed for decades. Over 23% of car journeys involve some kind of parking pain – that’s 190 million trips a month – with drivers suffering from both uncertainty (availability, prices, restrictions) and inconvenience (full car parks, slow payments, unfair fines) on a daily basis. Yet we have the technology to make parking function seamlessly – and so much space is lying underutilised. There has to be a better system… At FindSpot, we are on a mission to make parking easy. Findspot is dedicated to solving the parking problem by cracking both sides of the market – making parking easy and efficient for everyone.<br><br><br></p>
+</div>
+
+<div class="container-fluid wrap wrapWhite">
+<div class="box">
+	<div class="row">
+		<div class="col-lg-12">
+			<h2 class="intro-text text-left" style="color:black"><br>Contact Us</h2>
+			<form>
+				<div class="row">
+					<div class="form-group col-lg-4">
+						<label>Name*</label>
+						<input type="text" class="form-control">
+					</div>
+					<div class="form-group col-lg-4">
+						<label>Email*</label>
+						<input type="email" class="form-control">
+					</div>
+					<div class="form-group col-lg-4">
+						<label>Phone Number*</label>
+						<input type="tel" class="form-control">
+					</div>
+					<div class="form-group col-lg-12">
+						<label>Message</label>
+						<textarea class="form-control" rows="6"></textarea>
+					</div>
+					<div class="form-group col-lg-12">
+						<input type="hidden" name="save" value="contact">
+						<button type="submit" class="btn btn-primary">Submit</button>
+					</div>
+
+				</div>
+			</form>
+	</div>
+	</div>
 	</div>
 </div>
 </body>

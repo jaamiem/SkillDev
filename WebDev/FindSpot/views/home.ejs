@@ -1,53 +1,95 @@
-<!doctype HTML>
+
+<!DOCTYPE html>
 <html lang="en">
 <%- include('partials/header') %>
 <body>
 <%- include('partials/navbar') %>
 
-<script>
-	// TODO: Script sidebar functions
-	// TODO: Try swapping the map script above the nav bar to solver overlapping map.
-</script>
+<!-- Sidebar -->
+<div class='navbar-primary <%= collapseSidebar %>'>
+	<div class='sidebtn'> <!-- Button to expand sidebar, absolute pos at bot of div -->
+		<a href='#' class='btn-expand-collapse'><span class='glyphicon glyphicon-menu-left'></span></a>
+	</div>
+	<div class='sidebar'>
+		<ul class='navbar-primary-menu panel-group' id='accordion'>
+			<li>
+				<div class="panel panel-info">
+					<%# Hide the add location button if a user is not logged in %>
+					<% if (typeof user !== 'undefined' && user !== null) { %>
+						<h6>
+							<a id='addLocationButton' class='panel heading' href="/add">Add location...</a>
+						</h6>
+					<% } %>
+					<div class="panel heading">
+						<a data-toggle='collapse' data-parent='#accordion' href='#collapseFilter'>
+							<h6> Advanced Search Options</h6>
+						</span></a>
+					</div>
+					<div id='collapseFilter' class='panel-collapse collapse'>
+						<div class='panel-body'>
+							<form class="filterOps">
+								<div class="input-group mb-4">
+									<input class="form-control" name="loc" type="text" id="loc" aria-label="Advanced search textbox">
+								</div>
+								<div class="input-group mb-4">
+									<label>Price<input class="form-control" name="price" type="range" id="priceSlider"></label>
+									<span id="priceDisplay"></span>
+								</div>
+								<div class="input-group mb-4">
+									<button class="btn btn-primary">
+										Advanced search
+									</button>
+								</div>
+							</form>
+						</div>
+				</div>
+			</li>
+			<li>
+				<h6 style='margin: auto;'> Search Results </h6>
+			</li>
+			<% if (queryDefined) { %>
+				<%# for ( i = 0; i < Object.keys(spots.default).length; i++ )  { %>
 
-<div id="content">
-	<!-- <div id='sidebar'>
-		<ul class="list-unstyled components">
-			<p>Dummy Heading</p>
-			<li class="active">
-				<a href="#spotSubmenu" data-toggle="collapse">Home</a>
-				<ul class="collapse list-unstyled" id="spotSubmenu">
-					<li><a href="#">Home 1</a></li>
-					<li><a href="#">Home 2</a></li>
-					<li><a href="#">Home 3</a></li>
-			  	</ul>
-			<li><a href="#">About</a>
+				<% var spotNo = 1; %>
+				<% spots.forEach(function(spot) { %>
+					<li>
+						<div class="panel panel-default">
+							<div class="panel heading">
+								<a data-toggle='collapse' data-parent='#accordion' href='#collapse<%= spotNo %>'>
+									<span class="glyphicon glyphicon-map-marker"></span><span class="nav-label">
+									<h6><%= spot.name %></h6><h6 class='markerDist<%= spotNo %> pull-right'></h6>
+								</span></a>
+							</div>
+							<div id='collapse<%= spotNo %>' class='panel-collapse collapse'>
+								<div class='panel-body'>
+									<p> Type of location: 	<%= spot.type %> 	</p>
+									<p> Street Name: 	<%= spot.name %> 	</p>
+									<p> Cost: 		£<%= spot.price %>	 </p>
+									<p> Description: 	<%= spot.name %> 	</p>
+									<p> Rating: 	<%= spot.name %> 	</p>
+								</div>
+							</div>
+						</div>
+					</li>
+				<% spotNo++ %>
+				<% }); %>
+				<%# } %>
+			<% } %>
 		</ul>
-	</div> -->
-	<div id="map"></div>
+	</div>
 </div>
 
-<script>
-function initMap() {
-	var abz = {lat:57.1497, lng:-2.0943};
-	var map = new google.maps.Map(document.getElementById('map'), {
-		zoom: 8,
-		center: abz
-	});
+<!-- Map Display Div -->
+<div id="map">
+	<!-- The map is loaded if JavaScript is enabled, otherwise this message is shown -->
+	<noscript><p>Unfortunately, we haven't been able to load Google Maps.</p></noscript>
+</div>
 
-}
-// TODO: Write loop to place all spots on the map
-function placeMarker(map, location){
-	var marker = new google.maps.marker({
-		position: location,
-		map: map
-	});
-}
 
+<script defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDRK2xpbDf14zS08cMkp252N8uPvt3O4_I&callback=initMap">
 </script>
 
-<script async defer
-  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDRK2xpbDf14zS08cMkp252N8uPvt3O4_I&callback=initMap">
-</script>
+<script src="scripts/findspot.js" type="application/javascript"></script>
 
 </body>
 </html>
