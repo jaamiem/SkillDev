@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Ashe Passive Calc </title>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+
+<body ng-app="ashePassive" ng-controller="myCtrl">
+
+<div class="box" >
+	<div class="content">
+		<h1> Ashe Passive Calculator </h1>
+		<br>
+		<form>
+			<p>Crit Chance:   <input type="number" ng-model="crit"></p>
+			<p>Infinity Edge:  <input type="radio" name="favColour" ng-model="IE" value=50></p>
+			<p>Result: {{critdmg}} % Crit Chance</p>
+		</form>
+	</div>
+</div>
+
+<script>
+
+	var app = angular.module('ashePassive', []);
+
+	app.controller('myCtrl' function($scope) {
+		$scope.critdmg = 10 + (crit * (1 + IE ));
+	})
+
+</script>
+
+</body>
+</html>
