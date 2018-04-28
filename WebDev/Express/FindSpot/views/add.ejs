@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('partials/header') %>
+<body>
+<%- include('partials/navbar') %>
+	<div class="row" id="content">
+		<div class="col">
+			<h2>Add Location</h2>
+			<form action="/locations" method="POST">
+				<div class="input-group mb-4">
+					<label class="input-group-prepend input-group-text" for="name">Name</label>
+					<input class="form-control" type="text" name="name" id="name">
+				</div>
+				
+				<div class="input-group mb-4">
+					<label class="input-group-prepend input-group-text" for="type">Type</label>
+					<input class="form-control" type="text" name="type" id="type">
+				</div>
+				
+				<div class="input-group mb-4">
+					<label class="input-group-prepend input-group-text" for="lat">Latitude</label>
+					<input class="form-control" type="double" name="lat" id="lat">
+				</div>
+				
+				<div class="input-group mb-4">
+					<label class="input-group-prepend input-group-text" for="long">Longitude</label>
+					<input class="form-control" type="double" name="long" id="long">
+				</div>
+				
+				<div class="input-group mb-4">
+					<label class="input-group-prepend input-group-text" for="price">Price (£)</label>
+					<input class="form-control" type="double" name="price" id="price">
+				</div>
+				
+				<div class="input-group mb-4">
+					<button class="btn pull-right btn-primary" type="submit">Submit</button>
+				</div>
+			</form>
+		</div>
+		<div class="col" id="map"></div>
+	</div>
+	
+	
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDRK2xpbDf14zS08cMkp252N8uPvt3O4_I&callback=initMap"></script>
+	<script src="scripts/findspot.js" type="application/javascript"></script>
+	<script src="scripts/fsadd.js" type="application/javascript"></script>
+	
+</body>
+</html>

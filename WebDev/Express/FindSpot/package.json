@@ -1,16 +1,17 @@
 {
   "name": "findspot",
   "version": "1.0.0",
-  "description": "FindSpot parking app",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "Group 4",
-  "license": "ISC",
-  "dependencies": {
-    "ejs": "^2.5.8",
-    "express": "^4.16.3"
-  },
   "main": "app.js",
-  "devDependencies": {}
+  "scripts": {
+    "start": "node app.js"
+  },
+  "author": "",
+  "license": "UNLICENSED",
+  "dependencies": {
+    "ejs": "^2.5.9",
+    "express": "^4.16.3",
+    "express-session": "^1.15.6",
+    "mongodb": "^2.2.35"
+  },
+  "description": ""
 }

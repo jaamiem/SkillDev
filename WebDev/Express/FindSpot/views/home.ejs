@@ -4,14 +4,24 @@
 <%- include('partials/header') %>
 <body>
 <%- include('partials/navbar') %>
+<%- include('partials/accModals') %>
+
+<%
+	// This variable is 'collapse' if the sidebar is to be initially hidden on page load or '' otherwise.
+	// It should show only if the user has searched for something
+	var collapseSidebar;
+	if (queryDefined) {
+		collapseSidebar = ''; // This bootstrap class is applied to the sidebar if the user has searched for something
+	} else {
+		collapseSidebar = 'collapsed'; // No search, no no class to show.
+	}
+%>
 
 <!-- Sidebar -->
 <div class='navbar-primary <%= collapseSidebar %>'>
-	<div class='sidebtn'> <!-- Button to expand sidebar, absolute pos at bot of div -->
-		<a href='#' class='btn-expand-collapse'><span class='glyphicon glyphicon-menu-left'></span></a>
-	</div>
 	<div class='sidebar'>
 		<ul class='navbar-primary-menu panel-group' id='accordion'>
+			<li><a href='#' class='btn-expand-collapse'><span class='glyphicon glyphicon-menu-left'></span></a></li>
 			<li>
 				<div class="panel panel-info">
 					<%# Hide the add location button if a user is not logged in %>
@@ -32,7 +42,11 @@
 									<input class="form-control" name="loc" type="text" id="loc" aria-label="Advanced search textbox">
 								</div>
 								<div class="input-group mb-4">
-									<label>Price<input class="form-control" name="price" type="range" id="priceSlider"></label>
+									<label>Rating<input class="form-control" name="rating" type="range" min="1" max="5" id="ratingSlider"></label>
+									<span id="ratingDisplay"></span>									
+								</div>
+								<div class="input-group mb-4">
+									<label>Price<input class="form-control" name="price" type="range" min="0" max="10" id="priceSlider"></label>
 									<span id="priceDisplay"></span>
 								</div>
 								<div class="input-group mb-4">
@@ -66,7 +80,15 @@
 									<p> Street Name: 	<%= spot.name %> 	</p>
 									<p> Cost: 		£<%= spot.price %>	 </p>
 									<p> Description: 	<%= spot.name %> 	</p>
-									<p> Rating: 	<%= spot.name %> 	</p>
+									<p> Rating: 	<%= spot.rating %> 	</p>
+									
+									<!-- Couldn't implement ratings due to lack of time -->
+									<!-- <h5>Rate this location</h5> -->
+									<%# Generate 5 buttons to be used when rating a location %>
+									<%# for (var i = 1; i <= 5; i++) { %>
+										<!-- <button onclick="$.post('/ratelocation', {rating:<%#= i %>, name:'<%#= spot.name %>'});" name="rate<%#= i %>"
+												class="btn btn-primary"><%#= i %></button> -->
+									<%# } %>
 								</div>
 							</div>
 						</div>
@@ -85,11 +107,11 @@
 	<noscript><p>Unfortunately, we haven't been able to load Google Maps.</p></noscript>
 </div>
 
-
-<script defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDRK2xpbDf14zS08cMkp252N8uPvt3O4_I&callback=initMap">
+<script defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDRK2xpbDf14zS08cMkp252N8uPvt3O4_I&libraries=places&callback=initMap">
 </script>
 
 <script src="scripts/findspot.js" type="application/javascript"></script>
+
 
 </body>
 </html>

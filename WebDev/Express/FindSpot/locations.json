@@ -1,0 +1,14 @@
+{ "name" : "The Broadhill Bar", "type" : "car park", "lat" : 57.158964571850355, "long" : -2.0855870826462706, "price" : "0", "_id" : ObjectId("5ae38bae6f9eab073606508d") }
+{ "name" : "Riverside Drive", "type" : "street", "lat" : 57.124162059877555, "long" : -2.1200552268037427, "price" : "0", "_id" : ObjectId("5ae38c0c6f9eab073606508e") }
+{ "name" : "College Street Car Park", "type" : "lot", "lat" : 57.142736, "long" : -2.099031, "price" : 0, "1star": 0,"2star": 0,"3star": 0,"4star": 0,"5star": 0, "rating":1}
+{ "name" : "Crown Terrace", "type" : "street", "lat" : 57.140506, "long" : -2.101225, "price" : 2 , "1star": 0,"2star": 0,"3star": 0,"4star": 0,"5star": 0, "rating":1}
+{ "name": "RGU", "type": "car park", "lat": 57.119455, "long": -2.135970, "price": 0, "1star": 0,"2star": 0,"3star": 0,"4star": 0,"5star": 0, "rating":1}
+{ "name": "Dunmail Avenue Car Park", "type": "car park", "lat": 57.116851, "long": -2.178875, "price": 0, "1star": 0,"2star": 0,"3star": 0,"4star": 0,"5star": 0, "rating":1}
+{ "name": "Broomhill Road Car Park", "type": "car park", "lat": 57.136235, "long":-2.115159, "price":1.50, "1star": 0,"2star": 0,"3star": 0,"4star": 0,"5star": 0, "rating":1}
+{ "name": "Aberdeen Car Parks", "type": "car park", "lat":57.142587, "long": -2.109011, "price":1.50, "1star": 0,"2star": 0,"3star": 0,"4star": 0,"5star": 0, "rating":1}
+{ "name": "College Street Car Park", "type": "lot", "lat":57.142587, "long": -2.109011, "price":1.50, "1star": 0,"2star": 0,"3star": 0,"4star": 0,"5star": 0, "rating":1}
+{ "name": "Harriet Street Car Park", "type": "lot", "lat":57.148145, "long": -2.100754, "price":1.00, "1star": 0,"2star": 0,"3star": 0,"4star": 0,"5star": 0, "rating":1}
+{ "name": "Union Square Car Park", "type": "car park", "lat":57.142885,"long": -2.094525, "price":0, "1star": 0,"2star": 0,"3star": 0,"4star": 0,"5star": 0, "rating":1}
+{ "name": "Denburn Car Park", "type": "lot", "lat":57.148708, "long": -2.106670, "price":1.00, "1star": 0,"2star": 0,"3star": 0,"4star": 0,"5star": 0, "rating":1}
+{ "name": "Gallowgate Car Park", "type": "car park", "lat":57.150877,"lat": -2.097780, "price":1.20, "1star": 0,"2star": 0,"3star": 0,"4star": 0,"5star": 0, "rating":1}
+{ "name": "Fonthill Road Car Park", "type": "car park", "lat":57.137344,"long": -2.113441, "price":1.00, "1star": 0,"2star": 0,"3star": 0,"4star": 0,"5star": 0, "rating":1}

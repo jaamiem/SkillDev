@@ -1,11 +1,16 @@
-<ul class="list-unstyled components">
-	<p>Dummy Heading</p>
-	<li class="active">
-		<a href="#spotSubmenu" data-toggle="collapse">Home</a>
-		<ul class="collapse list-unstyled" id="spotSubmenu">
-			<li><a href="#">Home 1</a></li>
-			<li><a href="#">Home 2</a></li>
-			<li><a href="#">Home 3</a></li>
-	  	</ul>
-	<li><a href="#">About</a>
-</ul>
+<div id="resultsPane">
+	<a id="closeSearch" class="btn accBtn" href="/">close</a>
+	<h3>Search</h3>
+	<p>for "<%= query %>"</p>
+	<ul class="list-group">
+		<% spots.forEach(function(item) { %>
+			<li>
+				<a href="#" class="list-group-item">
+					<%= item.name %>
+					<br>
+					<%= item.type %>
+				</a>
+			</li>
+		<% }); %>
+	</ul>
+</div>
