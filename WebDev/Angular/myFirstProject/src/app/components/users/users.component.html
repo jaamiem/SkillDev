@@ -1,11 +1,24 @@
 <div class='users' >
 	<div class='card' *ngFor="let user of users$">
-		<img src='http://placekitten.com/75/75' />
-		<h4> {{ user.name }} </h4>
-		<p> {{ user.username }} </p>
-		<p> {{ user.email }} </p>
-		<p> {{ user.website }} </p>
-		<p> {{ user.phone }} </p>
+		<a routerLink='/profile/{{user.id}}'>
+			<img class='avatar' draggable="false" src='http://placekitten.com/250/250' />
+			<div class='deets'>
+				<h3> {{ user.name }} </h3>
+				<!-- <p>
+					<i class='material-icons'>account_circle</i>
+					{{ user.username }}
+				</p> -->
+				<hr />
+				<p>
+					<i class='material-icons'>alternate_email</i>
+					{{ user.email }}
+				</p>
+				<p>
+					<i class='material-icons'>directions</i>
+					{{ user.website }}
+				</p>
+			</div>
+		</a>
 	</div>
 </div>
 

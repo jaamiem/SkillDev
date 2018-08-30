@@ -12,4 +12,8 @@ export class DataService {
 	getUsers(){
 		return this.http.get('https://jsonplaceholder.typicode.com/users');
 	}
+
+	// getAvatars(width, height){
+	// 	return this.http.get('http://placekitten.com/'+width+'/'+height)
+	// }
 }

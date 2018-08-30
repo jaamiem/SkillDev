@@ -1,15 +1,52 @@
+// colours:
+/*
+	-Blue #00a8ff
+	-Black #2D2E2E
+*/
+
 .users {
 	display: grid;
 	// grid-template-areas: "a b c d e";
-	grid-template-columns: repeat(3, 1fr);
-	// grid-template-rows: auto;
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 	grid-gap: 3em;
 	align-items: center;
+	user-select: none;
+	overflow: auto;
 
 	.card {
 		background: #fff;
+		width: 300px;
 		border-radius: 5px;
 		margin:auto;
-		width: 250px;
+		box-shadow: 0 0 3px #d9d9d9;
+		// border: #ccc solid .7px;
+		transition: ease-out all .7s;
+
+		.deets {
+			padding: 10px;
+			color: #2D2E2E;
+
+			.material-icons {
+				font-size: 24px;
+			}
+		}
+
+		.avatar {
+			width: 100%;
+			user-drag: none;
+			user-select: none;
+		}
+
+		a {
+			text-decoration: none;
+		}
+	}
+	.card:hover {
+		box-shadow: 0 6px .3px #00a8ff;
+		transition: ease all .1s;
+
+		h3{
+			color: #00a8ff;
+		}
 	}
 }
