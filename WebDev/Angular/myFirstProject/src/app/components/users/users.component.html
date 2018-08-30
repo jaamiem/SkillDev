@@ -1,0 +1,24 @@
+<div class='users' >
+	<div class='card' *ngFor="let user of users$">
+		<img src='http://placekitten.com/75/75' />
+		<h4> {{ user.name }} </h4>
+		<p> {{ user.username }} </p>
+		<p> {{ user.email }} </p>
+		<p> {{ user.website }} </p>
+		<p> {{ user.phone }} </p>
+	</div>
+</div>
+
+<!-- <div class='users'>
+	<ul>
+		<li class='card'>
+			hi
+		</li>
+		<li class='card'>
+			hi
+		</li>
+		<li class='card'>
+			hi
+		</li>
+	</ul>
+</div> -->

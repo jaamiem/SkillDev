@@ -1,0 +1,15 @@
+.users {
+	display: grid;
+	// grid-template-areas: "a b c d e";
+	grid-template-columns: repeat(3, 1fr);
+	// grid-template-rows: auto;
+	grid-gap: 3em;
+	align-items: center;
+
+	.card {
+		background: #fff;
+		border-radius: 5px;
+		margin:auto;
+		width: 250px;
+	}
+}
