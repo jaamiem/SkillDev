@@ -6,28 +6,30 @@
 
 .users {
 	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-	grid-gap: 3em;
-	align-items: center;
+	grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+	grid-gap: 3vmin;
+	// align-items: center;
 	user-select: none;
-	overflow: auto;
-	padding: 5%;
+	// overflow: auto;
+	padding: 5vmin;
 
 	.card {
 		background: #fff;
-		width: 300px;
+		width: 30vmin;
+		font-size: 1.6vmin;
+		line-height: .8;
 		border-radius: 5px;
-		margin:auto;
+		// margin:auto;
 		box-shadow: 0 0 3px #d9d9d9;
 		// border: #ccc solid .7px;
 		transition: ease-out all .7s;
 
 		.deets {
-			padding: 10px;
+			padding: 2vmin;
 			color: #2D2E2E;
 
 			.material-icons {
-				font-size: 24px;
+				font-size: inherit;
 			}
 		}
 
@@ -46,12 +48,12 @@
 		box-shadow: 0 6px .3px #00a8ff;
 		transition: ease all .1s;
 
-
 		h3{
 			color: #00a8ff;
 		}
 	}
 	.card:active {
-		transform: scale(1.03);
+		transform: scale(1.1);
+		z-index:99;
 	}
 }

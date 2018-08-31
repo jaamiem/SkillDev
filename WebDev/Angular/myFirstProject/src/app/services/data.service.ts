@@ -9,11 +9,15 @@ export class DataService {
 	constructor(public http: HttpClient) {
 	}
 
-	getUsers(){
+	getAllUsers(){
 		return this.http.get('https://jsonplaceholder.typicode.com/users');
 	}
 
-	// getAvatars(width, height){
-	// 	return this.http.get('http://placekitten.com/'+width+'/'+height)
-	// }
+	getUser(id){
+		return this.http.get('https://jsonplaceholder.typicode.com/users/'+id)
+	}
+
+	getAvatar(width, height){
+		return this.http.get('http://placekitten.com/'+width+'/'+height)
+	}
 }

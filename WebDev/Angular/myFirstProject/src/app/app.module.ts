@@ -15,7 +15,7 @@ import { SidebarComponent } from './components/sidebar/sidebar.component';
 
 const appRoutes: Routes = [
 	{ path:'', component:HomeComponent },
-	{ path:'profile', component:ProfileComponent },
+	{ path:'profile/:id', component:ProfileComponent },
 	{ path:'posts', component:PostsComponent },
 	{ path:'users', component:UsersComponent }
 ];
